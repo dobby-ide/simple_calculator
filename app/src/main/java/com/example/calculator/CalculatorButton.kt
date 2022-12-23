@@ -13,10 +13,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 
-class CalculatorButton {
 
 
-    @SuppressLint("NotConstructor")
+
+
     @Composable
     fun CalculatorButton(
         symbol: String,
@@ -42,4 +42,3 @@ class CalculatorButton {
     fun CalculatorButtonPreview(){
         CalculatorButton(symbol = "1", modifier = Modifier) {}
     }
-}
