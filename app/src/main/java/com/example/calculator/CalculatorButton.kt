@@ -33,7 +33,7 @@ class CalculatorButton {
             Text(
                 text = symbol,
                 fontSize = 34.sp,
-                color = Color.White
+                color = Color.Red
             )
         }
     }
