@@ -37,7 +37,7 @@ fun Calculator(
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ){
             Text(
-                text = state.number1 + (state.operation ?: "") + state.number2,
+                text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
                 textAlign = TextAlign.End,
                 modifier = Modifier.fillMaxWidth()
                 .padding(vertical = 30.dp),
@@ -75,7 +75,7 @@ fun Calculator(
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
-                        onAction(CalculatorAction.Clear)
+                        onAction(CalculatorAction.Operation(CalculatorOperation.Divide))
                     }
                 )
 
@@ -217,7 +217,7 @@ fun Calculator(
                         .aspectRatio(2f)
                         .weight(2f),
                     onClick = {
-                        onAction(CalculatorAction.Number(2))
+                        onAction(CalculatorAction.Number(0))
                     })
                 CalculatorButton(
                     symbol = ".",
